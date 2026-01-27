@@ -60,19 +60,48 @@ const OrderForm: React.FC<OrderFormProps> = ({ onSubmit }) => {
             Order Form
           </div>
           <h1 className="text-4xl font-bold mb-3 tracking-tight">翌日納品オーダー</h1>
-          <p className="text-gray-400 leading-relaxed max-w-lg text-sm">
+          <p className="text-gray-400 leading-relaxed max-w-lg text-sm mb-6">
             撮影の翌日に、完成したお写真が <span className="text-white font-bold">Openframe</span> より納品されます。
           </p>
+          
+          <div className="bg-white/5 border-l-2 border-orange-500/50 p-4 rounded-r-lg max-w-lg">
+            <p className="text-xs text-gray-300 leading-relaxed mb-2">
+              <i className="fas fa-info-circle text-orange-500 mr-2"></i>
+              Openframeより通常通りご発注いただいた後、<br/>
+              撮影翌日での納品完了を希望する撮影番号をご記入ください。
+            </p>
+            <p className="text-xs text-orange-400 font-bold ml-6">
+              オーダーは撮影日前日の18:00までとなります。
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="p-8 bg-gray-50 border-b border-gray-100 flex items-center justify-between">
-        <div className="flex items-center space-x-3 text-gray-600">
-          <i className="fas fa-receipt text-lg text-orange-500"></i>
-          <span className="font-semibold text-sm">料金</span>
+      {/* Pricing Section - Updated to emphasize additional cost */}
+      <div className="p-8 bg-orange-50/30 border-b border-gray-100">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="flex items-center space-x-3 text-gray-600">
+            <div className="bg-white p-2 rounded-lg border border-gray-100 shadow-sm">
+                <i className="fas fa-receipt text-lg text-orange-500"></i>
+            </div>
+            <div>
+                <span className="font-bold text-sm text-gray-800">オプション料金</span>
+                <p className="text-[10px] text-gray-500 mt-0.5">Next-Day Delivery Option Fee</p>
+            </div>
+          </div>
+          
+          <div className="text-right">
+            <div className="text-2xl font-bold text-gray-900">
+              ¥4,000 <span className="text-xs font-normal text-gray-400">/ 税抜</span>
+            </div>
+          </div>
         </div>
-        <div className="text-2xl font-bold text-gray-900">
-          ¥4,000 <span className="text-xs font-normal text-gray-400">/ 税抜</span>
+
+        <div className="mt-4 bg-orange-100/50 border border-orange-200 rounded-lg p-3 flex items-start space-x-3 animate-pulse-slow">
+            <i className="fas fa-exclamation-circle text-orange-600 mt-0.5 text-sm"></i>
+            <p className="text-xs font-bold text-orange-800 leading-relaxed">
+                こちらの料金は、通常の撮影料金に追加となります。
+            </p>
         </div>
       </div>
 
