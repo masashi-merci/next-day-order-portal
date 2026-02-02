@@ -34,7 +34,7 @@ const SuccessView: React.FC<SuccessViewProps> = ({ order, onBack }) => {
         <div className="mb-10 p-4 border-l-4 border-orange-500 bg-orange-50 text-left max-w-md mx-auto">
           <p className="text-[11px] text-orange-800 font-bold mb-1">💡 納品について</p>
           <p className="text-xs text-orange-900 leading-relaxed">
-            お写真は撮影の翌日までに <span className="font-bold">Openframe</span> より納品されます。マイページよりご確認ください。
+            お写真は撮影の翌日に <span className="font-bold">Openframe</span> より納品されます。
           </p>
         </div>
 
